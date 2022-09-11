@@ -1,0 +1,77 @@
+.header-bg {
+  background-color: var(--cor-8);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  color: var(--cor-0);
+}
+
+.header > .header-menu {
+  display: flex;
+  gap: 59px;
+}
+
+.header > .header-menu > li > a {
+  position: relative;
+}
+
+.header > .header-menu > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background-color: var(--cor-0);
+  height: 2px;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.header > .header-menu > li > a:hover::after {
+  width: 100%;
+}
+
+.header > .header-menu > li > a:active::after {
+  width: 100%;
+}
+
+.header > .header-cta {
+  /* text-transform: uppercase; */
+  border: 1px solid var(--cor-1);
+  padding: 9px 18px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.header > .header-cta:hover {
+  background-color: var(--cor-1);
+  color: var(--cor-8);
+}
+
+@media (max-width: 768px) {
+  .header > .header-menu {
+    gap: 15px;
+  }
+
+  .header > .header-menu > li > a {
+    padding: 5px 12px;
+  }
+
+  .header > .header-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header > .header-cta {
+    display: none;
+  }
+}
