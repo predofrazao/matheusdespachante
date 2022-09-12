@@ -43,6 +43,10 @@
 }
 
 .font-1-s {
+  font: 500 0.75rem/1.17 "Poppins", Arial, sans-serif;
+}
+
+.font-1-s-b {
   font: 400 0.75rem/1.17 "Poppins", Arial, sans-serif;
 }
 
